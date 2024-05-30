@@ -1,0 +1,23 @@
+[tool.poetry]
+authors = [
+  "nazar220160 <nazar.fedorowych@gmail.com>",
+  "arkptz <arkptz@gmail.com>",
+]
+name = "tgconvertor"
+version = "0.0.9"
+homepage = 'https://github.com/nazar220160/TGConvertor'
+readme = "README.md"
+description = "This module is small util for easy converting Telegram sessions to various formats"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyrogram = "^2.0.106"
+aiosqlite = "^0.20.0"
+opentele = { git = 'https://github.com/Arkptz/opentele' }
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

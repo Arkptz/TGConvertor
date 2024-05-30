@@ -1,0 +1,5 @@
+.venv
+.direnv
+__pycache__
+test.py
+sessions
