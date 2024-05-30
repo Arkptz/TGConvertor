@@ -84,7 +84,16 @@
         python = defaultPython;
         overrides = defaultOverrides;
       };
+      tgconvertor-unwrapped = mkPoetryApplication defaultAttrs;
+
+      tgconvertor = pkgs.stdenv.mkDerivation {
+        name = "tgconvertor";
+        src = cleanSources;
+      };
     in {
+      packages = {
+        tgconvertor = tgconvertor;
+      };
       devShells.default = let
         poetryEnv = mkPoetryEnv defaultAttrs;
       in
